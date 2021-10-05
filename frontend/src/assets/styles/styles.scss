@@ -1,0 +1,36 @@
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+@import "setup/typography";
+
+// Basics
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/base";
+@import "basics/buttons";
+
+/* PAGES */
+@import "pages/Home";
+@import "pages/Login";
+@import "pages/About";
+@import "pages/Dashboard";
+@import "pages/ToyApp";
+@import "pages/ToyDetails";
+@import "pages/ToyEdit";
+@import "pages/ReviewsPage";
+
+/* cmps */
+@import "cmps/Backdrop";
+@import "cmps/Loader";
+@import "cmps/Modal";
+@import "cmps/ImgLink";
+@import "cmps/Header";
+@import "cmps/Footer";
+@import "cmps/AddToy";
+@import "cmps/Accordion";
+@import "cmps/UserMsg";
+@import "cmps/ToyFilter";
+@import "cmps/ChatApp";
+@import "cmps/ToyReview";
+@import "cmps/ReviewAdd";

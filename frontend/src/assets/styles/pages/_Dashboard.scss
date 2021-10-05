@@ -1,0 +1,14 @@
+.dashboard {
+    gap: 20px;
+    // .dashboard-header {
+    // }
+    @include for-mobile-layout {
+        width: 100vw;
+    }
+    @include for-narrow-layout {
+        width: 460px;
+    }
+    @include for-normal-layout {
+        width: 660px;
+    }
+}

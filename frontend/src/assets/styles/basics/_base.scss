@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: $clr1;
+    background-color: $clr5;
+    font-family: montserrat, sans-serif;
+}
+
+main {
+    // @include for-mobile-layout {
+    //     max-height: 55vh;
+    // }
+    &.loading{
+        opacity: 0.5;
+    }
+    min-height: 85vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+button,
+input[type="checkbox"],
+select {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}

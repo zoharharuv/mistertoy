@@ -1,0 +1,51 @@
+.add-toy {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    label {
+        p {
+            color: $clr5;
+            cursor: pointer;
+            &:hover{
+                color: gold;
+            }
+        }
+    }
+    input {
+        background-color: $clr5;
+        height: 40px;
+        border-radius: 5px;
+        outline: 0;
+        border: 0;
+        padding: 10px;
+        margin-inline-end: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        &.hidden {
+            display: none;
+        }
+    }
+    .select {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .btn-add {
+        border: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 1.8rem;
+        color: $clr5;
+        cursor: pointer;
+        transition: 0.3s;
+        background-color: #1dc80e;
+        &:hover {
+            transform: scale(1.1);
+            opacity: 0.6;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+header {
+    width: 100%;
+    display: flex;
+    background-color: $clr2;
+    color: $clr5;
+    align-items: center;
+    .screen {
+        inset: 0;
+        background: #333333a2;
+        opacity: 0;
+        transition: opacity 0.2s;
+        pointer-events: none;
+        &.active {
+            cursor: pointer;
+            pointer-events: all;
+            opacity: 1;
+            position: fixed;
+            z-index: 10;
+        }
+        @include for-normal-layout {
+            display: none;
+        }
+    }
+    .header-content {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            width: 81px;
+            padding: 10px 0px;
+            padding-inline-start: 5px;
+            @include for-normal-layout {
+                transition: transform 0.2s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            @include for-wide-layout {
+                width: 72px;
+            }
+        }
+        // MOBILE+NARROW
+        nav {
+            z-index: 25;
+            background: $clr4;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 35vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            transform: translateX(100%);
+            transition: transform 0.2s ease-in;
+            &.active {
+                box-shadow: -2px 0px 10px 2px #d1cfcf4d;
+                transform: translateX(0%);
+            }
+            button {
+                border: 0;
+                width: 100%;
+                background-color: transparent;
+            }
+            .user-info {
+                order: -1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                p {
+                    display: none;
+                    margin-bottom: 5px;
+                }
+                .logout-btn {
+                    border-bottom: 1px solid #ffffffab;
+                    font-size: 1.2rem;
+                    padding: 45px 0;
+                    color: $clr8;
+                }
+                .login-btn {
+                    font-size: 1.2rem;
+                    color: $clr3;
+                }
+            }
+            a {
+                border-bottom: 1px solid #ffffffab;
+                text-align: center;
+                width: 100%;
+                padding: 50px 0;
+                color: $clr1;
+                display: inline-block;
+                text-decoration: none;
+                transition: 0.25s ease-in;
+            }
+            // NORMAL + WIDE
+            @include for-normal-layout {
+                z-index: 0;
+                background: transparent;
+                position: static;
+                right: unset;
+                top: unset;
+                width: unset;
+                height: unset;
+                box-shadow: none;
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                transform: unset;
+                &.active {
+                    box-shadow: unset;
+                }
+                a {
+                    border-bottom: none;
+                    color: $clr5;
+                    transition: 0.25s ease-in;
+                    font-size: 1.2rem;
+                    padding: 0;
+                    width: unset;
+                    &:hover {
+                        text-shadow: 0px 0px 5px $clr5;
+                    }
+                }
+                .user-info {
+                    height: 100%;
+                    order: unset;
+                    width: 120px;
+                    p {
+                        display: unset;
+                    }
+                    .login-btn {
+                        width: 100px;
+                        padding: 10px 0;
+                        border-radius: 4px;
+                        background: $clr5;
+                        color: $clr3;
+                        text-align: center;
+                        transition: 0.2s ease-out;
+                        &:hover {
+                            background: $clr3;
+                            color: $clr5;
+                            width: 120px;
+                        }
+                    }
+                    .logout-btn {
+                        border: 1px solid transparent;
+                        color: $clr1;
+                        background-color: $clr5;
+                        border-color: $clr4;
+                        padding: 5px 10px;
+                        font-size: 0.75rem;
+                        line-height: 1.5;
+                        border-radius: 3px;
+                        transition: 0.2s ease-out;
+                        margin-bottom: 5px;
+                        &:hover {
+                            color: $clr5;
+                            background-color: $clr8;
+                        }
+                    }
+                }
+            }
+        }
+        // JUST TOGGLE
+        .btn-menu-toggle {
+            @include for-normal-layout {
+                display: none;
+            }
+            display: inline-block;
+            visibility: visible;
+            border: none;
+            color: $clr5;
+            background-color: transparent;
+            padding: 7px 15px;
+            font-size: 1.3em;
+            transition: text-shadow 0.2s;
+        }
+        .btn-menu-toggle:hover {
+            text-shadow: 1px 1px 10px $clr5;
+        }
+    }
+}

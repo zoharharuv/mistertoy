@@ -1,0 +1,33 @@
+.toy-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .filter-search {
+        position: relative;
+        display: inline-block;
+        @include for-mobile-layout {
+            max-width: 180px;
+        }
+    }
+    .label-select {
+        color: $clr1;
+        width: 180px;
+    }
+    @include for-mobile-layout {
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 10px;
+    }
+    @include for-narrow-layout {
+        flex-direction: column;
+        gap: 10px;
+    }
+    @include for-normal-layout {
+        flex-direction: row;
+        gap: 40px;
+    }
+    @include for-wide-layout {
+        flex-direction: row;
+        gap: 60px;
+    }
+}

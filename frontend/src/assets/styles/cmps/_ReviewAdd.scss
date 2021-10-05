@@ -1,0 +1,23 @@
+.review-add {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+    align-items: center;
+    width: 350px;
+    height: 250px;
+    gap: 25px;
+    color: $clr5;
+    textarea {
+        resize: none;
+    }
+    .review-add-select {
+        background-color: $clr4;
+    }
+    .add-review-btn {
+        background-color: gold;
+        border: none;
+        font-size: 1.2rem;
+        font-family: cursive;
+        color: $clr1;
+    }
+}

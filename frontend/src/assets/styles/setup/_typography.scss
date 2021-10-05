@@ -1,0 +1,79 @@
+@font-face {
+    font-family: montserrat;
+    src: url(../../fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: awe-reg;
+    src: url("../../fonts/font-awesome/fa-regular-400.ttf");
+}
+
+@font-face {
+    font-family: awe-solid;
+    src: url("../../fonts/font-awesome/fa-solid-900.ttf");
+}
+
+// FAS ICONS
+.far::before {
+    font-family: awe-reg;
+}
+
+.fas::before {
+    font-family: awe-solid;
+}
+
+.fas.fa-trash::before {
+    content: "\f1f8";
+}
+
+.fas.fa-info-circle::before {
+    content: "\f05a";
+}
+
+.fas.fa-edit::before {
+    content: "\f044";
+}
+
+.fas.fa-th-large::before {
+    content: "\f009";
+}
+
+.fas.fa-plus::before {
+    content: "\f067";
+}
+
+.fas.fa-undo-alt::before {
+    content: "\f2ea";
+}
+
+.fas.fa-save::before {
+    content: "\f0c7";
+}
+
+.fas.fa-search::before {
+    content: "\f002";
+}
+
+.fas.fa-shopping-cart::before {
+    content: "\f07a";
+}
+
+.fas.fa-sign-out-alt::before {
+    content: "\f2f5";
+}
+
+.fas.fa-sign-in-alt::before {
+    content: "\f2f6";
+}
+
+.fas.fa-times::before {
+    content: "\f00d";
+}
+
+.fas.fa-search::before {
+    content: "\f002";
+}
+
+.fas.fa-angle-double-right::before {
+    content: "\f101";
+}

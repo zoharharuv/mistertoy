@@ -1,0 +1,43 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .accordion-group{
+        margin-bottom: 30px;
+    }
+    .google-map {
+        @include for-mobile-layout {
+            width: 85vw !important;
+        }
+        @include for-normal-layout {
+            width: 100% !important;
+
+        }
+        &.loading{
+            visibility: hidden;
+        }
+        &.loaded{
+            visibility: unset;
+        }
+    }
+    .branch-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .branch-btns {
+        display: flex;
+        @include for-mobile-layout {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        justify-content: space-evenly;
+        button {
+            width: 120px;
+        }
+    }
+}

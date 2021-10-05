@@ -1,0 +1,43 @@
+.toy-details {
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 5vw;
+    flex-direction: column;
+    @include for-normal-layout {
+        flex-direction: row;
+    }
+    .toy-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .toys-bg {
+            width: 100%;
+            @include aspect-ratio(1, 1);
+            img{
+                object-fit: contain
+            }
+        }
+        @include for-normal-layout {
+            align-items: flex-start;
+            .toys-bg {
+                width: 400px;
+            }
+        }
+    }
+    /* CHAT ICON */
+    .chat-icon {
+        position: fixed;
+        cursor: pointer;
+        left: 5vw;
+        bottom: 10vh;
+        width: 30px;
+        @include for-normal-layout {
+            position: absolute;
+            left: unset;
+            right: 0;
+            bottom: 0;
+            width: 50px;
+        }
+    }
+}

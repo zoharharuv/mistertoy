@@ -1,0 +1,120 @@
+.toy-app {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    @include for-mobile-layout {
+        padding: 10px 0;
+    }
+    .toy-list {
+        max-height: 50vh;
+        @include for-narrow-layout {
+            max-height: 45vh;
+        }
+        @include for-normal-layout {
+            max-height: 55vh;
+        }
+        @include for-wide-layout {
+            max-height: 65vh;
+        }
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        gap: 30px;
+        justify-content: center;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 20px;
+            &-track {
+                background: transparent;
+            }
+            &-thumb {
+                background: $clr4;
+                &:hover {
+                    background: $clr2;
+                }
+            }
+        }
+        .toy-preview {
+            width: 180px;
+            height: 280px;
+            background-color: $clr1;
+            color: $clr4;
+            border-radius: 0.2em;
+            text-align: center;
+            padding: 8px;
+            &.sold-out {
+                background-color: $clr8;
+                opacity: 0.8;
+            }
+            .toy-preview-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 33px;
+                    height: 33px;
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+            .toy-price {
+                color: gold;
+            }
+            .sold-out {
+                color: $clr8;
+            }
+            .preview-actions {
+                opacity: 0.01;
+                display: flex;
+                grid-gap: 2px;
+                gap: 15px;
+                justify-content: center;
+                transition: opacity 0.2s;
+                span,
+                a {
+                    cursor: pointer;
+                    color: $clr4;
+                    font-size: 1.4rem;
+                }
+            }
+            &:hover .preview-actions {
+                opacity: 1;
+            }
+        }
+    }
+    .add-toy-btn {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        border: 0;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: $clr3;
+        color: $clr5;
+        font-size: 1.5rem;
+        transition: 0.2s ease-in;
+        &:hover {
+            font-size: 2rem;
+            background-color: $clr2;
+        }
+        @include for-mobile-layout {
+            width: 50px;
+            height: 50px;
+            font-size: 1.3rem;
+        }
+
+        @include for-narrow-layout {
+            width: 65px;
+            height: 65px;
+            font-size: 1.4rem;
+        }
+    }
+}

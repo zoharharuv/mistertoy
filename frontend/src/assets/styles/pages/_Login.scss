@@ -1,0 +1,23 @@
+.login-page {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+        input {
+            width: 120px;
+        }
+    }
+    .btn-link {
+        span {
+            cursor: pointer;
+            color: $clr2;
+            text-decoration: underline;
+            transition: 0.2s;
+            &:hover{
+                color: $clr3;
+                text-decoration: none;
+            }
+        }
+    }
+}

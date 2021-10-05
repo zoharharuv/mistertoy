@@ -1,0 +1,55 @@
+.accordion-group {
+    display: flex;
+    flex-direction: column;
+    .accordion-header {
+        padding: 0 10px;
+        color: $clr2;
+        background-color: $clr4;
+    }
+    .accordion {
+        display: flex;
+        background-color: $clr3;
+        color: $clr4;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        transition: 0.2s;
+        justify-content: space-between;
+        align-items: center;
+        &:after {
+            content: "➡";
+            font-size: 1.8em;
+            color: $clr4;
+            float: right;
+            transform: rotate(0deg);
+            transition: transform 0.1s ease-in;
+        }
+        &:hover:after {
+            transition: transform 0.2s ease-out;
+            transform: rotate(90deg);
+        }
+        &.active:after {
+            transition: transform 0.2s ease-out;
+            transform: rotate(90deg);
+        }
+    }
+    .panel {
+        padding: 0 18px;
+        background-color: $clr4;
+        color: $clr1;
+        max-height: 0px;
+        overflow: hidden;
+        transition-timing-function: ease-in;
+        transition: 0.15s;
+        &.active {
+            max-height: 200px;
+            transition-timing-function: ease-out;
+            transition: 0.8s;
+            p{
+                padding: 5px;
+            }
+        }
+    }
+}

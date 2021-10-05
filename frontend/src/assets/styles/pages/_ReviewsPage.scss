@@ -1,0 +1,53 @@
+.reviews-page,
+.user-details {
+    h1 {
+        align-self: center;
+    }
+    h3 {
+        a {
+            color: $clr2;
+            &:hover {
+                color: $clr3;
+            }
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+}
+
+.general-reviews {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 15px;
+    height: 100%;
+    &::-webkit-scrollbar {
+        width: 20px;
+        &-track {
+            background: transparent;
+        }
+        &-thumb {
+            background: $clr4;
+            &:hover {
+                background: $clr2;
+            }
+        }
+    }
+    .general-review {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        white-space: pre-wrap;
+        padding: 10px;
+        border-bottom: 1px $clr4 solid;
+        small.review-date {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            opacity: 0.8;
+        }
+    }
+}

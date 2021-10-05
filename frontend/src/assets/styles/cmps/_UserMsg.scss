@@ -1,0 +1,28 @@
+.user-msg {
+    z-index: 30;
+    color: $clr1;
+    padding: 10px;
+    font-size: 1.4em;
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);
+    background-color: $clr4;
+    button {
+        border: none;
+        background-color: transparent;
+        color: $clr5;
+        font-size: 1.2rem;
+        float: right;
+        border: 0;
+        border-radius: 50%;
+        margin: 5px;
+    }
+}
+
+.success {
+    background-color: rgb(41, 189, 73);
+}
+.danger {
+    background-color: rgb(175, 27, 27);
+}

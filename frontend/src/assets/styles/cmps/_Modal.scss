@@ -1,0 +1,39 @@
+.modal {
+    margin: 10px;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px $clr4;
+    background-color: $clr1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    .modal-close {
+        background: $clr8;
+        color: $clr5;
+        border-radius: 10px;
+        font-size: 1.4rem;
+        border: 0;
+        font-family: "montserrat";
+        padding: 8px 12px;
+        &:hover {
+            opacity: 0.7;
+            color: $clr4;
+        }
+    }
+    .input,
+    input {
+        width: calc(100vw - 5rem);
+        height: 3rem;
+        margin: 0 auto 0 0;
+        padding: 0.25rem 0.5rem;
+        outline: none;
+        background: $clr1;
+        border-radius: 6px;
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+}
